@@ -1,0 +1,86 @@
+.services{
+    overflow-x: hidden;
+    .containerServices{
+        opacity: .3;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .serv{
+            position: relative;
+            padding: 0 15px;
+            &:before{
+                content: "";
+                width: calc(100% - 60px);
+                height: calc(100% - 35px);
+                border: 1px solid #fff;
+                position: absolute;
+                left: 29px;
+                top: 15px;
+                z-index: 5;
+                transform: scale(0);
+                transition: .8s all ease;
+            }
+            .titleServ{
+                background: $azul;
+                color: #fff;
+                padding: 5px 15px;
+                position: absolute;
+                bottom: 3px;
+                width: calc(100% - 30px);
+                transition: 1s all ease;
+                span{
+                    font-size: .8em;
+                }
+                //display: none;
+            }
+            .hover{
+                position: absolute;
+                top: 0;
+                left: 15px;
+                width: calc(100% - 30px);
+                height: 100%;
+                background-color: rgba(0, 188, 212, 0.40);
+                color: #fff;
+                opacity: 0;
+                transform: scale(0);
+                transition: .6s all ease;                
+                span{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 75%;
+                    margin: 0 auto;
+                    font-size: 1.3em;
+                    font-weight: 700;
+                }
+            }
+
+            &:hover{
+                &:before{
+                    transform: scale(1);
+                    transition: .8s all ease;
+                }
+                .titleServ{
+                    bottom: -15px;
+                    opacity: 0;
+                    transition: .4s all ease;
+                }
+                .hover{
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: .6s all ease;
+                }
+            }
+        }
+    }
+    @media(min-width: 768px){
+        h2{
+            position: relative;
+            text-align: left;
+            transform: translateX(-15%);
+        }
+    }
+}

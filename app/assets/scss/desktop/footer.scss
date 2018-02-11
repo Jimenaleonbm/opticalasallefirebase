@@ -1,0 +1,17 @@
+footer{
+    clear: both;
+    background-color: $gris;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; 
+    padding: 30px 40px 30px 15px;
+    align-items: center;
+    .item.main{
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+    .item{
+        font-size: 1em;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,17 @@
+footer{
+    display: block;
+    div:not(.main){
+        margin: 10px 0;
+        padding-left: 10px;
+        position: relative;
+        &:before{
+            content: "";
+            display: block;
+            width: 15px;
+            height: 100%;
+            background-color: $azul;
+            position: absolute;
+            left: -15px;
+        }
+    }
+}

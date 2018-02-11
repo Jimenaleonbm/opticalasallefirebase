@@ -1,0 +1,82 @@
+section.brigades{
+    position: relative;
+    top: 100px;
+    width: calc(100% - 90px);
+    margin: 0 auto;
+    box-shadow: 1px 2px 12px 1px #969696;
+    padding: 30px;
+    h2{
+        padding: 10px 0;
+        text-align: left;
+    }
+    .slides{
+        min-height: 25vh;
+        .slide{
+            -webkit-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -o-transition-duration: .2s;
+            transition-duration: .2s;
+        }
+    }
+    .left{
+        width: 60%;
+        display: inline-block;
+        vertical-align: middle;
+        p{
+            margin-bottom: 15px;
+            color: $gris;
+        }
+        ul{
+            padding-left: 20px;
+        }
+    }
+    .right{
+        width: 38%;
+        display: inline-block;
+        vertical-align: middle;
+    }    
+
+    .buttons{
+        margin-top: 15px;
+        .button{
+            position: relative;
+            top: initial;
+            left: initial;
+            background-image: none;
+            display: inline-block;
+            width: auto;
+            margin: 0;
+            right: 0;
+            height: auto;
+            border: 1px solid;
+            padding: 5px 13px;
+            border-radius: 20px;
+            opacity: .4;
+            margin: 0px 10px 0 0;
+            font-size: .8em;   
+            cursor: pointer;   
+            background-color: #fff;
+            &:hover{
+                background-color: #000;
+                color: #fff;
+                //border: 1px solid #000;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        .button.download{
+            font-size: 1.2em;
+            background-color: $azul;
+            color: #fff;
+            opacity: 1;
+            font-weight: 500;
+            padding: 6px 15px;
+            a{
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

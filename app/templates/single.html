@@ -1,0 +1,51 @@
+<html ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body ng-controller="mainController">
+         <div class="container">
+            <div class="logo">
+                <img src="https://jimenamartin.com/optica/app/assets/img/logo.png" alt="logo" width="200px;"/>
+            </div>
+
+            <h1>Editar Producto</h1>
+
+
+            <form ng-submit="editProduct(id, formData)">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" ng-model="formData.nombre">
+                </div>
+                <div class="form-group">
+                    <label for="material">Material</label>
+                    <input type="text" class="form-control" id="material" placeholder="Material" ng-model="formData.material">
+                </div>
+                <div class="form-group">
+                    <label for="material">Categoria</label>
+                    <select class="form-control" ng-model="formData.categoria">
+                        <option value="lentes-o">Lentes Oftalmicos</option>
+                        <option value="monturas">Monturas</option>
+                        <option value="lentes-c">Lentes de Contacto</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="file" id="imagen" ng-model="formData.imagen">
+                    <p class="help-block">Imagen del producto.</p>
+                </div>
+                <button type="submit" class="btn btn-success">editar</button>
+                <button type="button" class="btn btn-default" ng-click="goHome()">Volver</button>
+            </form>
+         </div>
+
+
+
+        <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+         <script src="/bower_components/angular-swiper/dist/angular-swiper.js"></script>
+        <script src="/app/app.js"></script>
+        <script src="/app/services/mainService.js"></script>
+        <script src="/app/controllers/main.js"></script>
+    </body>
+</html>

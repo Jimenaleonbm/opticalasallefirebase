@@ -1,0 +1,118 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 85%;
+}
+.wrapper .container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.title{
+    font-family: 'DIN';
+    font-weight: 300;
+    color: $azul;
+    font-size: 2.7vw;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 10px 0 50px;
+}
+.subtitle{
+    font-size: 2vw;
+    margin: 8px 0;
+}
+img{
+    width: 100%;
+}
+section:not(.mainSlider){
+    margin: 4rem 0 0;
+}
+
+// icons
+.icon{
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+    position: relative;
+    top: -2px;
+}
+.icon-tel{
+    background-image: url(../../img/icon-tel.png);
+}
+.icon-dir{
+    background-image: url(../../img/icon-dir.png); 
+}
+
+// social
+.icon-f{
+    background-image: url(../../img/icon-f.png); 
+}
+.icon-i{
+    background-image: url(../../img/icon-i.png); 
+}
+.icon-t{
+    background-image: url(../../img/icon-t.png); 
+}
+.icon-y{
+    background-image: url(../../img/icon-y.png); 
+}
+.icon-d{
+    background-image: url(../../img/icon-d.png); 
+    width: 20px;
+    height: 16px;
+}
+@media(max-width: 769px){
+    .title{
+        font-size: 2em;
+        padding: 10px 0 20px;
+    }
+
+    .subtitle{
+        font-size: 1.3em;
+    }
+
+    section:not(.mainSlider) {
+        margin: 2rem 0 0;
+    }
+}
+.jimenamartin{
+    background-color: #000;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: .8em;
+    span{
+        font-size: .6em;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+.loader {
+    position: relative;
+    height: 300px;
+  }
+  
+  .rubik-loader {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(http://i.giphy.com/3og0ISeflb7vrNzy2A.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+  }

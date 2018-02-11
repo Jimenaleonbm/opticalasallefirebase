@@ -1,0 +1,16 @@
+.contact{
+    #map{
+        height: 150px;
+    }
+    .contactForm{
+        position: relative;
+        width: 100%;
+        padding-bottom: 15px;
+        .title{
+            font-size: 2em;
+        }
+        .description{
+            font-size: 1em;
+        }
+    }
+}

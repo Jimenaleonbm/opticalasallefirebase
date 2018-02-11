@@ -1,0 +1,22 @@
+.mainSlider{
+    ul{
+        li{
+            .description{
+                position: relative;
+                top: -3px;
+                left: 0;
+                width: 100%;
+                transform: translate(0, 0);
+                font-size: 1rem;
+                background-color: rgb(64, 64, 64);
+                padding: 10px 30px;
+            }
+        }
+        .controls{
+            top: auto;
+            bottom: 2px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+<html ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body ng-controller="mainController">
+         <div class="container">
+            <div class="logo">
+                <img src="/app/assets/img/logo.png" alt="logo" width="200px;"/>
+            </div>
+            <div align="right" style="margin: 10px 0 30px">
+                <button type="button" class="btn btn-success" ng-click="showAdd = true">+ Crear nuevo producto</button>
+            </div>
+
+            <table class="table table-striped" ng-if='!showAdd && !showedit'>
+                <tr>
+                    <td><strong>Imagen</strong></td>
+                    <td><strong>Nombre</strong></td>
+                    <td><strong>Material</strong></td>
+                    <td><strong>Categoria</strong></td>
+                    <td><strong>Opciones</strong></td>
+                </tr>
+                <tr ng-repeat="product in products track by $index">
+                    <td><img ng-src="{{product.imagen}}" style="width:50px; height:50px;" /></td>
+                    <td>{{product.nombre}}</td>
+                    <td>{{product.material}}</td>
+                    <td>{{product.categoria}}</td>
+                    <td>
+                        <button type="button" class="btn btn-info" ng-click="showEdit(product)">Editar</button>
+                        <button type="button" class="btn btn-danger" ng-click="deleteProduct(product._id)">Eliminar</button>
+                    </td>
+                </tr>
+            </table>
+
+
+            <form ng-submit="createProduct(formData)" ng-if='showAdd'
+            enctype:'multipart/form-data' name="myform">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" ng-model="formData.nombre" require>
+                </div>
+                <div class="form-group">
+                    <label for="material">Material</label>
+                    <input type="text" class="form-control" id="material" placeholder="Material" ng-model="formData.material" >
+                </div>
+                <div class="form-group">
+                    <label for="material">Categoria</label>
+                    <select class="form-control" ng-model="formData.categoria" require>
+                        <option value="Lentes Oftalmicos" selected="selected">Lentes Oftalmicos</option>
+                        <option value="Monturas">Monturas</option>
+                        <option value="Lentes de Contacto">Lentes de Contacto</option>
+                    </select>
+                </div>
+                <!-- formData.imagen -->
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    
+                    <input type="file" ng-model="formData.imagen" archivo multiples="false" require>
+                   
+                </div>
+                <button type="submit" class="btn btn-success" style="margin-top: 30px;">Crear</button>
+                <!--<button type="button" class="btn btn-default" ng-click="showAdd = false">Volver</button> -->
+            </form>
+
+            <div class="edit" ng-if='showedit'>
+                <h1>Editar Producto</h1>
+                <form ng-submit="editProduct(currentProduct._id, formData)">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" ng-value="currentProduct.nombre"  ng-model="formData.nombre" require>
+                    </div>
+                    <div class="form-group">
+                        <label for="material">Material</label>
+                        <input type="text" class="form-control" id="material" placeholder="Material" ng-value="currentProduct.material" ng-model="formData.material" >
+                    </div>
+                    <div class="form-group">
+                        <label for="material">Categoria</label>
+                        <select class="form-control" ng-model="formData.categoria" require>
+                            <option value="Lentes Oftalmicos" selected="selected">Lentes Oftalmicos</option>
+                            <option value="Monturas">Monturas</option>
+                            <option value="Lentes de Contacto">Lentes de Contacto</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagen">Imagen</label>
+                        <input type="file" ng-model="formData.imagen" archivo multiples="false" require ng-init="currentProduct.imagen">
+                        
+                    </div>
+                    <button type="submit" class="btn btn-success">editar</button>
+                    <!--<button type="button" class="btn btn-default" ng-click="goHome()">Volver</button>-->
+                </form>
+            </div>
+
+         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+         <script src="/app/libs/swiper.min.js"></script>
+       <script src="/app/libs/angular-swiper.js"></script>
+        <script src="/app/app.js"></script>
+        <script src="/app/services/mainService.js"></script>
+        <script src="/app/directives/imagen.js"></script>
+        <script src="/app/controllers/main.js"></script>
+    </body>
+</html>

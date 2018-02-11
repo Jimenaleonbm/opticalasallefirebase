@@ -1,0 +1,25 @@
+section.products{
+    padding: 0 15px;
+    .title{
+        font-size: 2em;
+    }
+    .contain{
+        .left, .right{
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+    .publicity{
+        display: block;
+        clear: both;
+        padding: 1px 0;
+        margin: 0;
+        .item{
+            margin: 20px 0px;
+            img{
+                padding: 0;
+            }
+        }
+    }
+}

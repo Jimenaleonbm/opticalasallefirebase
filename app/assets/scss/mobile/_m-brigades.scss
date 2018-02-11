@@ -1,0 +1,13 @@
+section.brigades{
+    width: calc(100% - 30px);
+    .left, .right{
+        width: 100%;
+        display: block;
+    }
+    .buttons{
+        text-align: center;
+        .button{
+            margin-bottom: 10px;
+        }
+    }
+}

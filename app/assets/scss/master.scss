@@ -1,0 +1,30 @@
+@import "variables";
+@import "fonts";
+@import "base";
+
+
+// commons
+@import "desktop/mainSlider";
+@import "desktop/about";
+@import "desktop/services";
+@import "desktop/brigades";
+@import "desktop/contact";
+@import "desktop/footer";
+@import "desktop/products";
+
+// only desktop
+@media (min-width: 768px){
+    @import "desktop/menu";
+}
+
+// only mobile
+@media (max-width: 767px){
+    @import "mobile/menu";
+    @import "mobile/_m-mainSlider";
+    @import "mobile/_m-about";
+    @import "mobile/_m-services";
+    @import "mobile/_m-brigades";
+    @import "mobile/_m-contact";
+    @import "mobile/_m-footer";
+    @import "mobile/_m-products";
+}

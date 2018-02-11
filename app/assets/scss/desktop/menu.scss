@@ -1,0 +1,91 @@
+header{
+    .info{
+        padding: 5px 15px;
+        background-color: $gris;
+        span{
+            color: $gris-c;
+            font-size: .8rem;
+            letter-spacing: 1px;
+            &.dir{
+                margin-left: 10px;
+                padding-left: 10px;
+                border-left: 1px solid $gris-c;
+            }
+            a{
+                color: $gris-c;
+                text-decoration: none;
+                }
+        }
+        .social{
+            display: inline-block;
+            float: right;
+        }
+    }
+
+    .mainMenu{
+        .logo{
+            display: inline-block;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            align-items: center;
+            padding: 5px 0px 3px;
+            border-bottom: 1px solid #e6e6e6;
+            li{
+                color: $gris;
+                font-size: 1em;
+                font-weight: 500;
+                &:after{
+                    content: "";
+                    width: 0%;
+                    height: 2px;
+                    background-color: $azul;
+                    display: block;
+                    position: relative;
+                    bottom: -10px;
+                }
+                a{
+                    color: $gris;
+                    text-decoration: none;
+                }
+                &:nth-child(1){
+                    width: 36%;
+                    &:after{
+                        display: none;
+                    }
+                    img{
+                        max-width: 140px;
+                    }
+                }
+                &:last-child{
+                    border: 2px solid $azul;
+                    padding: 8px 12px;
+                    a{
+                        color: $azul;
+                    }
+                }
+                &:hover{
+                    a{
+                        transition: .3s color ease;
+                        color: $azul;
+                    }
+                    &:after{
+                        width: 100%;
+                        transition: .3s width linear;
+                    }
+                    &:last-child{
+                        background-color: $azul;
+                        a{
+                            color: #fff;
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+}
+.menu-mobile{
+    display: none;
+}
